@@ -1,0 +1,21 @@
+﻿<Window x:Class="Gammalbil.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gammalbil"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="txtWeight" HorizontalAlignment="Left" Margin="103,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73"/>
+        <Button x:Name="btnCalculate" Content="Beräkna vikt" HorizontalAlignment="Left" Margin="103,266,0,0" VerticalAlignment="Top" Width="73" Click="btnCalculate_Click"/>
+        <Label x:Name="lblB" HorizontalAlignment="Left" Margin="216,226,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblExtendedB" HorizontalAlignment="Left" Margin="216,263,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnControl" Content="Kontrollera" HorizontalAlignment="Left" Margin="231,268,0,0" VerticalAlignment="Top" Width="67" Click="btnControl_Click"/>
+        <TextBox x:Name="txtPlatenumber" HorizontalAlignment="Left" Margin="231,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"/>
+        <Button x:Name="btnPlatespotting" Content="Platespotting" HorizontalAlignment="Left" Margin="400,249,0,0" VerticalAlignment="Top" Width="75" Click="btnPlatespotting_Click"/>
+        <Label x:Name="lblRandomNumber" HorizontalAlignment="Left" Margin="400,217,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lblSavedPlate" HorizontalAlignment="Left" Margin="498,254,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
