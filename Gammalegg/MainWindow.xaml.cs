@@ -96,8 +96,11 @@ namespace Gammalegg
         }
         private void btnAddHens_Click(object sender, RoutedEventArgs e)
         {
+            // Skapar nya hönor i henHouse listan.
             HenHouse henHouse = new HenHouse(250);
-            henHouse.CountEggs();
+
+            // Anropar eggs listan av äggen.
+            List<Egg> eggs = henHouse.CollectEggs();
         }
     }
 }

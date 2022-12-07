@@ -9,6 +9,8 @@ namespace Gammalegg
     internal class HenHouse
     {
         public List<Hen> Hens { get; set; } = new List<Hen>();
+        
+        public List<Egg> eggs { get; set; } = new List<Egg>();
 
         public int Stable { get; set; }
 
@@ -31,6 +33,23 @@ namespace Gammalegg
                 sum += hen.LayEgg();
             }
             return sum;
+        }
+
+        // Skapar en metod för att lägga till ägg i listan eggs.
+        public List<Egg> CollectEggs()
+        {
+            foreach (Hen hen in Hens)
+            {
+                // Skapar ett nytt objekt "egg" som tar från listan Egg klassen och kopplar den med LayEgg2 metoden.
+                Egg egg = hen.LayEgg2(); 
+                // Om egg INTE är null (!= null) så skapas ett ägg i listan eggs.
+                if (egg != null)
+                {
+                    eggs.Add(egg);
+                }
+            }
+            // Returnerar listan eggs.
+            return eggs;
         }
     }
 }
