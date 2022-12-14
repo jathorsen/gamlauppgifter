@@ -5,11 +5,23 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gamlauppgifter", "Gamlauppgifter\Gamlauppgifter.csproj", "{FAF23857-0C0C-4776-9A5B-856ECFDCADD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gammalegg", "Gammalegg\Gammalegg.csproj", "{F5865F4A-2157-4EAB-92F2-E1827AB5BDA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gammalegg", "Gammalegg\Gammalegg.csproj", "{F5865F4A-2157-4EAB-92F2-E1827AB5BDA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gammalbil", "Gammalbil\Gammalbil.csproj", "{2D629BD3-19A0-4DCA-8CB5-B426E7D81A04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gammalbil", "Gammalbil\Gammalbil.csproj", "{2D629BD3-19A0-4DCA-8CB5-B426E7D81A04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gammalbil2", "Gammalbil2\Gammalbil2.csproj", "{B692746A-7BD9-4AB6-AB61-0A9ED62A8480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gammalbil2", "Gammalbil2\Gammalbil2.csproj", "{B692746A-7BD9-4AB6-AB61-0A9ED62A8480}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gammalval", "Gammalval\Gammalval.csproj", "{BE2D2485-7829-4ECD-9AB3-E6DE1E97EBBA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gammalval2", "Gammalval2\Gammalval2.csproj", "{ADBBA99D-81AE-4C35-9097-DA6C9234597A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gammalval3", "Gammalval3\Gammalval3.csproj", "{0868E437-1F31-4C9D-83BF-2CB3BA8D1F8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gammalnobel", "Gammalnobel\Gammalnobel.csproj", "{198501BD-D5F7-42BE-94B9-627BEBF80BF0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gammalnobel2", "Gammalnobel2\Gammalnobel2.csproj", "{A1666532-7C28-47E1-AF8A-DF30A2FDDA9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gammalmaklare", "Gammalmaklare\Gammalmaklare.csproj", "{C2AE0D5A-A429-43B5-AF91-16E3B0A6F32D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +45,30 @@ Global
 		{B692746A-7BD9-4AB6-AB61-0A9ED62A8480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B692746A-7BD9-4AB6-AB61-0A9ED62A8480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B692746A-7BD9-4AB6-AB61-0A9ED62A8480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2D2485-7829-4ECD-9AB3-E6DE1E97EBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2D2485-7829-4ECD-9AB3-E6DE1E97EBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2D2485-7829-4ECD-9AB3-E6DE1E97EBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2D2485-7829-4ECD-9AB3-E6DE1E97EBBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBBA99D-81AE-4C35-9097-DA6C9234597A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBBA99D-81AE-4C35-9097-DA6C9234597A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBBA99D-81AE-4C35-9097-DA6C9234597A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBBA99D-81AE-4C35-9097-DA6C9234597A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0868E437-1F31-4C9D-83BF-2CB3BA8D1F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0868E437-1F31-4C9D-83BF-2CB3BA8D1F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0868E437-1F31-4C9D-83BF-2CB3BA8D1F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0868E437-1F31-4C9D-83BF-2CB3BA8D1F8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{198501BD-D5F7-42BE-94B9-627BEBF80BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{198501BD-D5F7-42BE-94B9-627BEBF80BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{198501BD-D5F7-42BE-94B9-627BEBF80BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{198501BD-D5F7-42BE-94B9-627BEBF80BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1666532-7C28-47E1-AF8A-DF30A2FDDA9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1666532-7C28-47E1-AF8A-DF30A2FDDA9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1666532-7C28-47E1-AF8A-DF30A2FDDA9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1666532-7C28-47E1-AF8A-DF30A2FDDA9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2AE0D5A-A429-43B5-AF91-16E3B0A6F32D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2AE0D5A-A429-43B5-AF91-16E3B0A6F32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2AE0D5A-A429-43B5-AF91-16E3B0A6F32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2AE0D5A-A429-43B5-AF91-16E3B0A6F32D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

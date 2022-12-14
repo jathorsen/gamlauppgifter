@@ -1,0 +1,18 @@
+﻿<Window x:Class="Gammalnobel2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gammalnobel2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnGetSeats" Content="Få platser" HorizontalAlignment="Left" Margin="85,185,0,0" VerticalAlignment="Top" Width="84" Height="32" Click="btnGetSeats_Click"/>
+        <Button x:Name="btnWinners" Content="Se vinnare" HorizontalAlignment="Left" Margin="85,263,0,0" VerticalAlignment="Top" Width="84" Height="33" Click="btnWinners_Click"/>
+        <Button x:Name="btnHiddenGuest" Content="Hemlig gäst" HorizontalAlignment="Left" Margin="236,247,0,0" VerticalAlignment="Top" Width="86" Click="btnHiddenGuest_Click"/>
+        <Button x:Name="btnGetGuests" Content="Hämta gäster" HorizontalAlignment="Left" Margin="449,113,0,0" VerticalAlignment="Top" Width="93" Click="btnGetGuests_Click"/>
+        <ListBox x:Name="listBoxGuests" Margin="399,138,208,95"/>
+        <Button x:Name="btnBonus" Content="Bonus" HorizontalAlignment="Left" Margin="236,133,0,0" VerticalAlignment="Top" Width="108" Click="btnBonus_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="Gammalnobel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gammalnobel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnOk" Content="Ok" HorizontalAlignment="Left" Margin="83,197,0,0" VerticalAlignment="Top" Height="31" Width="97" Click="btnOk_Click"/>
+        <TextBox x:Name="txtBoom" HorizontalAlignment="Left" Margin="352,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnBoom" Content="OK" HorizontalAlignment="Left" Margin="352,232,0,0" VerticalAlignment="Top" Width="120" Click="btnBoom_Click"/>
+        <TextBlock x:Name="txtExplosion" HorizontalAlignment="Left" Margin="352,270,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="246"/>
+        <Button x:Name="btnMolecules" Content="Mera molekyler" HorizontalAlignment="Left" Margin="620,242,0,0" VerticalAlignment="Top" Width="94" Click="btnMolecules_Click"/>
+
+    </Grid>
+</Window>
