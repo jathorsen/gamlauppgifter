@@ -64,24 +64,37 @@ namespace Gammalnobel2
 
         private void btnBonus_Click(object sender, RoutedEventArgs e)
         {
-            //GetOddCategory([1,1,2]);
-            //GetOddCategory();
-            //GetOddCategory();
+            int[] oddNumber1 = { 1, 1, 2 };
+            GetOddCategory(oddNumber1);
+
+            int[] oddNumber2 = {0,1,0,1,0};
+            GetOddCategory(oddNumber2);
+
+            int[] oddNumber3 = { 1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1 };
+            GetOddCategory(oddNumber3);
         }
 
-        //private int GetOddCategory(/*int[] oddNumbers*/)
-        //{
-        //    int number = 0;
-        //    int[] numbers = new int[] { 1, 1, 2 };
-
-        //    for (int i = 0; i < numbers.Length; i++)
-        //    {
-        //        if (numbers)
-        //        {
-        //            number = numbers[i];
-        //        }
-        //    }
-        //    return number;
-        //}
+        private int GetOddCategory(int[] oddNumbers)
+        {
+            // Här loopar jag två gånger. I första loopen tar jag fram numbers i oddNumbers.
+            foreach (int numbers in oddNumbers)
+            {
+                int number = 0;
+                // I denna loop tar jag fram numbers2 oddNumbers, sedan jämförs numbers och numbers2.
+                foreach (int numbers2 in oddNumbers)
+                {
+                    if (numbers == numbers2) // Jämför. Om de är lika plussas number på, och loopen fortsätter.
+                    {
+                        number++;
+                    }
+                }
+                // När loopen är klar så kollar det vilket tal som är udda.
+                if (number %2 != 0) //Här kollar jag ifall talet är ett udda antal, med hjälp av modulus. Om number modulus 2 INTE blir noll, returneras numbers.
+                {
+                    return numbers;
+                }
+            }
+            return 0;
+        }
     }
 }

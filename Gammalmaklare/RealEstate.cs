@@ -16,6 +16,7 @@ namespace Gammalmaklare
 
         public int Area { get; set; }
 
+        // För att snygga till listboxen i mainwindow!
         public override string ToString()
         {
             return $"{Address}";

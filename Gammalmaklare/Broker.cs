@@ -22,21 +22,24 @@ namespace Gammalmaklare
 };
         }
 
-        private bool AddRealEstate(RealEstate estates)
+        public bool AddRealEstate(RealEstate estates)
         {
-            string address = estates.Address;
-            int area = estates.Area;
-            int rooms = estates.Rooms;
+            RealEstates.Add(estates);
+            return true;
+        }
 
-            if (Char.IsLetter(address))
-            {
+        int id = 9;
 
-            }
+        // Ger en den nya lägenheten ett nytt ID varenda gång du sparar en lägenhet.
+        public int RealEstateID(RealEstate estates)
+        {
+            // Om AddRealEstate returnerar true så kommer ett nytt ID tillkallas till den nya lägenheten. Startvärdet är nio, och den returnerar det nya id.
+            if (AddRealEstate(estates) == true)
             {
-                RealEstates.Add(estates);
-                return true;
+                id++;
+                estates.Id = id;
             }
-            return false;
+            return id;
         }
     }
 }

@@ -41,50 +41,73 @@ namespace Gammalnobel
             int strength = 0;
             strength = int.Parse(txtBoom.Text);
 
-            string boom = strength.ToString();
+            string boom = "B";
 
-            if (strength <= 0)
+            // Om strength är mer än 1
+            if (strength > 0)
             {
-                txtExplosion.Text = "Pfft!";
+                // Så kommer for-loopen starta och gå igenom värdet av strength, sedan läggs lika många "o" till i strängen boom för varenda värde i strength.
+                for (int i = 0; i < strength; i++)
+                {
+                    boom += "o";
+                }
+                boom += "m!";
             }
             else
             {
-                txtExplosion.Text = $"B{boom}m!";
+                txtExplosion.Text = "Pfft!";
             }
+            txtExplosion.Text = boom;
         }
 
         // Få hjälp av någon här sen!
 
-        //public static double GetAtomicWeight(char atom)
-        //{
-        //    return atom switch
-        //    {
-        //        'C' => 12.0107,
-        //        'H' => 1.00794,
-        //        'N' => 14.0067,
-        //        'O' => 15.9994,
-        //        'S' => 32.065,
-        //        _ => 0,
-        //    };
-        //}
+        public static double GetAtomicWeight(char atom)
+        {
+            return atom switch
+            {
+                'C' => 12.0107,
+                'H' => 1.00794,
+                'N' => 14.0067,
+                'O' => 15.9994,
+                'S' => 32.065,
+                _ => 0,
+            };
+        }
 
         private void btnMolecules_Click(object sender, RoutedEventArgs e)
         {
-            //CalculateMolecularWeight("C3H5N3O9");
-            //CalculateMolecularWeight("H2O");
+            CalculateMolecularWeight("C3H5N3O9");
+            CalculateMolecularWeight("H2O");
         }
 
-        //private string CalculateMolecularWeight(string molecule)
-        //{
-        //    foreach (char atom in molecule)
-        //    {
-        //        if (Char.IsLetter(atom))
-        //        {
-        //        }
-        //        if (Char.IsNumber(atom))
-        //        {
-        //        }
-        //    }
-        //}
+        private double CalculateMolecularWeight(string molecule)
+        {
+            double weight = 0, value = 0, count = 0;
+            
+            // Foreach loopen letar efter chars i stringen "molecule".
+            foreach (char atom in molecule)
+            {
+                // Om det är en bokstav blir "value" samma som bokstaven den motsvarar i GetAtomicWeight, exempelvis om det är C blir value C.
+                if (Char.IsLetter(atom))
+                {
+                    value = GetAtomicWeight(atom);
+                }
+                // count = Char.GetNumericValue räknar vad en viss bokstav är värd, exempelvis C = 12.0107.
+                // weight = count * value. Likt första upppgiften (se över, btnOk_Click). Sedan resetas count till 0.
+                else
+                {
+                    count = Char.GetNumericValue(atom);
+                    weight += count * value;
+                    count = 0;
+                }
+            }
+            // När count då är 0 så kommer weight bli lika mycket som value.
+            if (count == 0)
+            {
+                weight += value;
+            }
+            return weight;
+        }
     }
 }

@@ -40,6 +40,7 @@ namespace Gammalmaklare
             int endPrice = int.Parse(txtPrice.Text);
             int squareKM = 57;
 
+            // Om endPrice är 4 bokstäver kommer det multipliceras så det hamnar i miljonen.
             if (endPrice.ToString().Length <= 4)
             {
                 endPrice = Convert.ToInt32(endPrice) * 1000;
@@ -61,6 +62,7 @@ namespace Gammalmaklare
             int fixedEndPrice = int.Parse(txtRemake.Text);
             int squareKM = 57;
 
+            // Om endPrice är 4 bokstäver kommer det multipliceras så det hamnar i miljonen, bara lite snyggare med "C0" lite senare i koden.
             if (fixedEndPrice.ToString().Length <= 4)
             {
                 fixedEndPrice = Convert.ToInt32(fixedEndPrice) * 1000;
@@ -83,8 +85,11 @@ namespace Gammalmaklare
             int minimum = int.Parse(txtMin.Text);
             int maximum = int.Parse(txtMax.Text);
 
+            // Skapar en ny lista som kommer returnera en lista av "estate".
             List<RealEstate> estate = new List<RealEstate>();
 
+            // Kollar igenom RealEstates listan för att se vilka lägenheter som har minimum likaså maximum rum. Om minimum/maximum stämmer överens med någon
+            // lägenhet i RealEstates listan kommer de läggas till i den nya "estate" listan, vilket tillkalas i metoden btnFilter_Click.
             foreach (RealEstate rooms in broker.RealEstates)
             {
                 if (minimum == rooms.Rooms)
@@ -101,8 +106,18 @@ namespace Gammalmaklare
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (broker.AddRealEstate() == true)
+            // Skapar en ny estate vid knapptryck.
+            RealEstate estate = new RealEstate();
+
+            // Ganska standard, textboxarna = estate.x.
+            estate.Address = txtAddress.Text;
+            estate.Area = int.Parse(txtArea.Text);
+            estate.Rooms = int.Parse(txtRooms.Text);
+
+            // Om AddRealEstate är true så kommer ett nytt ID tilldelas till den nya estaten, likaväl lägger till i listBoxen.
+            if (broker.AddRealEstate(estate) == true)
             {
+                estate.Id = broker.RealEstateID(estate);
                 listBoxRealEstate.ItemsSource = null;
                 listBoxRealEstate.ItemsSource = broker.RealEstates;
             }

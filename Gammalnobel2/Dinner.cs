@@ -102,14 +102,17 @@ namespace Gammalnobel2
         // GÖR SEN, EVENTUELLT MED HJÄLP!
         public int GetSeatNumber(int seat)
         {
-            for (int i = 1; i < seat; i++)
+            string seatCode = "";
+
+            // Loopen kollar efter '0'. Om det INTE är en nolla läggs den till i seatCode stringen, vilket sedan returneras av metoden, precis efter den görs om till en int.
+            foreach (char digit in seat.ToString())
             {
-                if (seat == 0)
+                if (digit != '0')
                 {
-                    seat -= 0;
+                    seatCode += digit;
                 }
             }
-            return seat;
+            return int.Parse(seatCode);
         }
 
         public List<Person> GetWinners()
